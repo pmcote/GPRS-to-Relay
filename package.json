@@ -1,0 +1,15 @@
+{
+  "name": "gprs-to",
+  "version": "0.0.0",
+  "description": "Uses texts from Tessels GPRS to control other modules.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paige Cote",
+  "license": "MIT",
+  "dependencies": {
+    "gprs-sim900": "~0.1.1",
+    "relay-mono": "~0.1.2"
+  }
+}
