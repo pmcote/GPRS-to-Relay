@@ -17,17 +17,9 @@ var relay = require('relay-mono').use(tessel.port('C'));
 // Emit unsolicited messages beginning with. . .
 gprs.emitMe(['+']);
 
-// gprs.on('ready', function () {
-// 	relay.on('ready', function () {
-// 		console.log('poop on you')
-// 	});
-// });
-
 function trigger (callback) {
 	// When receiving an unsolicited text, read it and print it to console
-	console.log('poo')
 	gprs.on('+', function messageNotify (data) {
-		console.log('poop')
 		var dataSplit = data.split(',');
 		var SMSindex = dataSplit[1];
 		var mode = 0; // Zero marks message as read, One will not change message status
@@ -55,7 +47,6 @@ function trigger (callback) {
 
 // The cool thing you want your triggered module to do. In this case, turn something on or off with the relay module.
 function coolAction (){
-	console.log('extra poo')
 	relay.toggle(1, function (err) {
 		if (err) console.log('There was an error toggling relay device 1 :(') 
 		console.log('toggled');
