@@ -57,7 +57,7 @@ function coolAction (){
 gprs.on('ready', function() {
 	// Wait around 30 seconds for the GPRS modual to connect before sending Tessel a text.
 	console.log("GPRS is on and waiting for you to text a trigger for your module");
-	// Assuming relay is on
+	// Assuming relay module is ready 
 	trigger(coolAction);
 });
 
