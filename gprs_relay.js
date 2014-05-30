@@ -10,8 +10,8 @@ to activate any other module by SMS. Have fun!
 **********************************************/
 
 var tessel = require('tessel');
-var gprslib = require('gprs-sim900')
-var relaylib = require('relay-mono')
+var gprslib = require('gprs-sim900');
+var relaylib = require('relay-mono');
 
 var gprs = gprslib.use(tessel.port['A']);
 var relay = relaylib.use(tessel.port['C']);
@@ -66,3 +66,5 @@ gprs.on('ready', function() {
 	// Assuming relay module is ready 
 	trigger(coolAction);
 });
+
+
